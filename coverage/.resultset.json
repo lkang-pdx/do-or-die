@@ -617,6 +617,7 @@
         null,
         1,
         null,
+        1,
         null
       ],
       "/Users/lunakang/development/do-or-die/app/models/application_record.rb": [
@@ -673,6 +674,6 @@
         null
       ]
     },
-    "timestamp": 1483052550
+    "timestamp": 1483292763
   }
 }

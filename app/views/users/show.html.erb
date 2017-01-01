@@ -1,1 +1,6 @@
 <h2>Hello <%= current_user.email %>!</h2>
+
+<h3>Current Todo Items</h3>
+<div class="container">
+  <p><%= render partial: 'items/item' %></p>
+</div>
