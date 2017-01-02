@@ -16,4 +16,17 @@ RSpec.describe ItemsController, type: :controller do
       expect(Item.count).to eq(1)
     end
   end
+
+  describe "DELETE destroy" do
+    it "deletes the item" do
+      delete :destroy, format: :js, user_id: user.id, id: item.id
+      count = Item.where({user_id: user.id, id: item.id}).count
+      expect(count).to eq 0
+    end
+
+    it "returns http success" do
+      delete :destroy, format: :js, user_id: user.id, id: item.id
+      expect(response).to have_http_status(:success)
+    end
+  end
 end

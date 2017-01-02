@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-01-02T09:40:39-08:00">2017-01-02T09:40:39-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-01-02T15:45:40-08:00">2017-01-02T15:45:40-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">96.89%</span></span>
+    (<span class="covered_percent"><span class="green">96.61%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.06
+         1.16
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>31</b> files in total.
-    <b>161</b> relevant lines. 
-    <span class="green"><b>156</b> lines covered</span> and
-    <span class="red"><b>5</b> lines missed </span>
+    <b>177</b> relevant lines. 
+    <span class="green"><b>171</b> lines covered</span> and
+    <span class="red"><b>6</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#c46ef7d82bb63667bdc16ffb187f6861af8870b9" class="src_link" title="app/controllers/items_controller.rb">app/controllers/items_controller.rb</a></td>
-        <td class="yellow strong">83.33 %</td>
-        <td>19</td>
-        <td>12</td>
-        <td>10</td>
-        <td>2</td>
-        <td>0.8</td>
+        <td class="yellow strong">85.0 %</td>
+        <td>34</td>
+        <td>20</td>
+        <td>17</td>
+        <td>3</td>
+        <td>1.2</td>
       </tr>
       
       <tr>
@@ -303,11 +303,11 @@
       <tr>
         <td class="strong"><a href="#f8f47d7c40728b7ad4afdc10b47fe92210a37b9f" class="src_link" title="spec/controllers/items_controller_spec.rb">spec/controllers/items_controller_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>33</td>
-        <td>11</td>
-        <td>11</td>
+        <td>32</td>
+        <td>19</td>
+        <td>19</td>
         <td>0</td>
-        <td>1.1</td>
+        <td>1.4</td>
       </tr>
       
       <tr>
@@ -337,7 +337,7 @@
         <td>4</td>
         <td>4</td>
         <td>0</td>
-        <td>1.3</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -347,7 +347,7 @@
         <td>6</td>
         <td>6</td>
         <td>0</td>
-        <td>1.7</td>
+        <td>2.3</td>
       </tr>
       
       <tr>
@@ -451,11 +451,11 @@
         <div class="source_table" id="c46ef7d82bb63667bdc16ffb187f6861af8870b9">
   <div class="header">
     <h3>app/controllers/items_controller.rb</h3>
-    <h4><span class="yellow">83.33 %</span> covered</h4>
+    <h4><span class="yellow">85.0 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>10</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>20</b> relevant lines. 
+      <span class="green"><b>17</b> lines covered</span> and
+      <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
   
@@ -549,28 +549,118 @@
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">  private</code>
+          <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="16">
+          <span class="hits">2</span>
           
-          <code class="ruby">  def item_params</code>
+          <code class="ruby">    @item = Item.find(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="17">
           
-          <code class="ruby">    params.require(:item).permit(:name)</code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="covered" data-hits="2" data-linenumber="18">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    if @item.destroy</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="19">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      flash[:notice] = &quot;\&quot;#{@item.name}\&quot; was deleted successfully.&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="21">
+          
+          
+          <code class="ruby">      flash.now[:alert] = &quot;There was an error deleting the item.&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="24">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    respond_to do |format|</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="25">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      format.html</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="26">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      format.js</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def item_params</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    params.require(:item).permit(:name)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">end</code>
@@ -3933,7 +4023,7 @@
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">    resources :items, only: [:create]</code>
+          <code class="ruby">    resources :items, only: [:create, :destroy]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -3993,8 +4083,8 @@
     <h3>spec/controllers/items_controller_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
+      <b>19</b> relevant lines. 
+      <span class="green"><b>19</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -4026,14 +4116,14 @@
           <code class="ruby">  include Devise::Test::ControllerHelpers</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="5">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="5">
+          <span class="hits">4</span>
           
           <code class="ruby">  let(:user) { create(:user) }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="6">
+          <span class="hits">3</span>
           
           <code class="ruby">  let(:item) { create(:item) }</code>
         </li>
@@ -4050,8 +4140,8 @@
           <code class="ruby">  before do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="9">
+          <span class="hits">3</span>
           
           <code class="ruby">    sign_in user</code>
         </li>
@@ -4113,88 +4203,82 @@
         <li class="never" data-hits="" data-linenumber="19">
           
           
-          <code class="ruby">  #   it &quot;increases the number of Item by 1&quot; do</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #     expect{post :create, item: {title: RandomData.random_sentence, body: RandomData.random_paragraph}}.to change(Item,:count).by(1)</code>
+          <code class="ruby">  describe &quot;DELETE destroy&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #   end</code>
+          <code class="ruby">    it &quot;deletes the item&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #</code>
+          <code class="ruby">      delete :destroy, format: :js, user_id: user.id, id: item.id</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #   it &quot;assigns the new item to @item&quot; do</code>
+          <code class="ruby">      count = Item.where({user_id: user.id, id: item.id}).count</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #     post :create, item: {title: RandomData.random_sentence, body: RandomData.random_paragraph}</code>
+          <code class="ruby">      expect(count).to eq 0</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby">  #     expect(assigns(:item)).to eq Item.last</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby">  #   end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #</code>
+          <code class="ruby">    it &quot;returns http success&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #   it &quot;redirects to the new item&quot; do</code>
+          <code class="ruby">      delete :destroy, format: :js, user_id: user.id, id: item.id</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  #     post :create, item: {title: RandomData.random_sentence, body: RandomData.random_paragraph}</code>
+          <code class="ruby">      expect(response).to have_http_status(:success)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
           
           
-          <code class="ruby">  #     expect(response).to redirect_to Item.last</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="31">
           
           
-          <code class="ruby">  #   end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="32">
-          
-          
-          <code class="ruby">  # end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="33">
           
           
           <code class="ruby">end</code>
@@ -4530,8 +4614,8 @@
           <code class="ruby">  factory :item do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="3">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="3">
+          <span class="hits">4</span>
           
           <code class="ruby">    name { Faker::Hacker.say_something_smart }</code>
         </li>
@@ -4584,8 +4668,8 @@
           <code class="ruby">  factory :user do</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="3">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="9" data-linenumber="3">
+          <span class="hits">9</span>
           
           <code class="ruby">    email { Faker::Internet.email }</code>
         </li>

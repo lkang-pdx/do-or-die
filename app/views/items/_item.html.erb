@@ -1,3 +1,6 @@
-<div>
-  <h5><%= item.name %></h5>
-</div>
+<tbody>
+  <%= content_tag :tr, class: "info", id: "item-#{item.id}" do %>
+    <td><%= item.name %></td>
+    <td><%= link_to "", [current_user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %></td>
+  <% end %>
+</tbody>
