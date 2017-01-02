@@ -1,1 +1,11 @@
 <h2>Hello <%= current_user.email %>!</h2>
+
+<h3>Current Todo Items</h3>
+<div class="container">
+  <p><%= render @items %></p>
+</div>
+
+<h3>Create Todo Items</h3>
+<div class="container">
+  <%= render 'items/form', item: Item.new, user: @user %>
+</div>
