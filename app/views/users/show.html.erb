@@ -2,5 +2,10 @@
 
 <h3>Current Todo Items</h3>
 <div class="container">
-  <p><%= render partial: 'items/item' %></p>
+  <p><%= render @items %></p>
+</div>
+
+<h3>Create Todo Items</h3>
+<div class="container">
+  <%= render :partial => 'items/form' %>
 </div>

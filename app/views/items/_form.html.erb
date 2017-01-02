@@ -1,6 +1,6 @@
 <h2>Submit a new item</h2>
   <div class="col-md-8">
-    <%= form_for @item do |f| %>
+    <%= form_for [user, item] do |f| %>
       <div class="form-group">
         <%= f.text_field :name, class: 'form-control', placeholder: "Enter the todo item" %>
       </div>

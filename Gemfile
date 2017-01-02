@@ -9,11 +9,14 @@ group :production do
   gem 'rails_12factor'
 end
 
-# #2
+group :development, :test do
+  gem 'pry-rails'
+  gem 'faker'
+end
+
 group :development do
   gem 'sqlite3'
   gem 'listen'
-  gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
 end
@@ -22,7 +25,6 @@ group :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'rails-controller-testing'
   gem 'shoulda'
-  gem 'faker'
   gem 'factory_girl_rails'
   gem 'simplecov'
 end
