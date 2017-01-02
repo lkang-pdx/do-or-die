@@ -7,5 +7,5 @@
 
 <h3>Create Todo Items</h3>
 <div class="container">
-  <%= render :partial => 'items/form' %>
+  <%= render 'items/form', item: Item.new, user: @user %>
 </div>
