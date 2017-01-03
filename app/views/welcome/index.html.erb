@@ -1,2 +1,8 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div class="jumbotron">
+  <h1>Do or Die</h1>
+  <p>Do or Die is a resource for creating self-destructing to-do lists!</p>
+  <p>
+  <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %> or
+  <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> today!
+  </p>
+</div>
