@@ -1,11 +1,11 @@
-<h2>Hello <%= current_user.email %>!</h2>
+<h2>Hey <%= current_user.email %>!</h2>
 
-<h3>Current Todo Items</h3>
+<h3>Here is your Do or Die list:</h3>
 <div class="row">
   <div class="col-md-8">
     <div class="media">
       <div class="media-body">
-        <table class="table table-hover">
+        <table class="table table-hover table-font">
           <thead>
             <tr>
               <th>Description</th>
@@ -23,8 +23,19 @@
     </div>
   </div>
 </div>
-
-<h3>Create Todo Items</h3>
-<div class="container">
-  <%= render 'items/form', item: Item.new, user: @user %>
+<h3>Create to-do items:</h3>
+<div class="row">
+  <div class="col-md-8">
+    <div class="media">
+      <div class="media-body">
+        <table class="table table-hover table-font">
+          <tbody>
+            <tr class='js-items'>
+              <%= render 'items/form', item: Item.new, user: @user %>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>

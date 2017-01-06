@@ -13,8 +13,20 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap-sprockets";
- @import "bootstrap";
+@import "bootstrap-sprockets";
+// @import "bootstrap";
+
+ // Import cerulean variables
+@import "bootswatch/superhero/variables";
+
+// Then bootstrap itself
+@import "bootstrap";
+
+// Bootstrap body padding for fixed navbar
+body { padding-top: 60px; }
+
+// And finally bootswatch style itself
+@import "bootswatch/superhero/bootswatch";
 
 .user-info {
   margin-top: 9px;
@@ -22,4 +34,8 @@
 
 .nav {
   margin-top: 5px;
+}
+
+.table-font {
+  font-size: 20px;
 }
