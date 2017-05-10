@@ -22,6 +22,12 @@
 // Then bootstrap itself
 @import "bootstrap";
 
+@mixin bold_font {
+	font-family: "Brandon Grotesque","Helvetica Neue", Helvetica, sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
 // Bootstrap body padding for fixed navbar
 body { padding-top: 60px; }
 
@@ -38,4 +44,37 @@ body { padding-top: 60px; }
 
 .table-font {
   font-size: 20px;
+}
+
+#banner {
+	background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(image_path("banner.jpg"));
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+	width: 100%;
+	min-height: 650px;
+	display: table;
+	.banner_content {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		h1 {
+			@include bold_font;
+			color: white;
+			font-size: 4rem;
+			margin: 0;
+      margin-bottom: 10px;
+		}
+		h3 {
+			font-size: 2.5rem;
+			margin: 2 2 2 2;
+			color: white;
+      margin-bottom: 30px;
+		}
+	}
 }
